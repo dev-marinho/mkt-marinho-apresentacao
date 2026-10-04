@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mkt Marinho — Audiovisual Autoral & Estratégico</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            bg: '#111111',
+                            card: '#181818',
+                            surface: '#222222',
+                            gold: '#D4AF37',
+                            sand: '#E6D7C3',
+                            terracotta: '#C86D51',
+                            muted: '#8A8A8A'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Cormorant Garamond', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+            background-color: #111111;
+            color: #E6D7C3;
+        }
+
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+            will-change: opacity, transform;
+        }
+
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .gold-glow {
+            box-shadow: 0 0 35px -5px rgba(212, 175, 55, 0.15);
+        }
+
+        .gold-border-glow:hover {
+            border-color: rgba(212, 175, 55, 0.5);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #111111;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333333;
+            border-radius: 3px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #D4AF37;
+        }
+    </style>
+</head>
+<body class="font-sans bg-brand-bg text-brand-sand antialiased selection:bg-brand-terracotta selection:text-white">
+
+    <header class="fixed top-0 left-0 w-full z-50 bg-brand-bg/80 backdrop-blur-md border-b border-white/5 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="font-serif text-2xl tracking-widest text-brand-sand font-semibold hover:text-brand-gold transition-colors">
+                MKT MARINHO<span class="text-brand-terracotta">.</span>
+            </a>
+            <nav class="hidden md:flex items-center space-x-8 text-xs tracking-widest uppercase font-medium text-brand-muted">
+                <a href="#filosofia" class="hover:text-brand-sand transition-colors">Posicionamento</a>
+                <a href="#preview" class="hover:text-brand-sand transition-colors">Visualizador</a>
+                <a href="#etapas" class="hover:text-brand-sand transition-colors">Processo</a>
+                <a href="#escopo" class="hover:text-brand-sand transition-colors">Escopo</a>
+            </nav>
+            <a href="https://wa.me/" target="_blank" class="text-xs uppercase tracking-widest border border-brand-sand/30 hover:border-brand-gold text-brand-sand hover:text-brand-gold px-5 py-2.5 rounded-full transition-all duration-300 bg-brand-surface/30">
+                Solicitar Proposta
+            </a>
+        </div>
+    </header>
+
+    <section class="min-h-screen relative flex items-center justify-center pt-24 pb-12 px-6 overflow-hidden">
+        <!-- Ambient Light Effect -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand-terracotta/10 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute bottom-10 right-10 w-[300px] h-[300px] bg-brand-gold/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div class="max-w-4xl mx-auto text-center relative z-10 fade-in-section">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-brand-gold/30 bg-brand-gold/5 text-brand-gold text-xs tracking-widest uppercase mb-8">
+                <i data-lucide="clapperboard" class="w-3.5 h-3.5"></i>
+                <span>Videomaker Autoral & Artesanal</span>
+            </div>
+            
+            <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-light tracking-tight text-white leading-[1.1] mb-8">
+                Narrativas visuais de <span class="italic font-normal text-brand-sand">alta percepção</span> de valor.
+            </h1>
+            
+            <p class="text-base sm:text-lg text-brand-muted max-w-2xl mx-auto font-light leading-relaxed mb-12">
+                Produção audiovisual estratégica sob medida para marcas artesanais, projetos autorais e lifestyle. A estética refinada que o seu produto ou serviço merece.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#preview" class="w-full sm:w-auto px-8 py-4 bg-brand-sand text-brand-bg font-medium text-xs tracking-widest uppercase rounded-full hover:bg-brand-gold transition-all duration-300 shadow-lg shadow-brand-sand/5">
+                    Explorar Demonstração
+                </a>
+                <a href="#filosofia" class="w-full sm:w-auto px-8 py-4 border border-white/10 hover:border-brand-sand/40 text-brand-sand text-xs tracking-widest uppercase rounded-full transition-all duration-300">
+                    Conhecer Filosofia
+                </a>
+            </div>
+        </div>
+
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-brand-muted/50 animate-bounce">
+            <i data-lucide="chevron-down" class="w-6 h-6"></i>
+        </div>
+    </section>
+
+    <section id="filosofia" class="py-24 px-6 border-t border-white/5 relative bg-brand-bg">
+        <div class="max-w-6xl mx-auto">
+            <div class="fade-in-section mb-16 text-center md:text-left">
+                <span class="text-brand-terracotta text-xs tracking-widest uppercase font-semibold">Manifesto</span>
+                <h2 class="font-serif text-3xl md:text-5xl text-white font-light mt-2">Um olhar atento ao detalhe.</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="fade-in-section p-8 rounded-2xl bg-brand-card border border-white/5 hover:border-brand-gold/30 transition-all duration-300 group">
+                    <div class="w-12 h-12 rounded-xl bg-brand-surface flex items-center justify-center text-brand-gold mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="sparkles" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl text-white mb-3">Qualidade sobre Volume</h3>
+                    <p class="text-brand-muted text-sm leading-relaxed font-light">
+                        Não entregamos conteúdo genérico em massa. Cada take é pensado intencionalmente para destacar a textura, a elegância e a essência do seu trabalho.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="fade-in-section p-8 rounded-2xl bg-brand-card border border-white/5 hover:border-brand-gold/30 transition-all duration-300 group">
+                    <div class="w-12 h-12 rounded-xl bg-brand-surface flex items-center justify-center text-brand-gold mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="hourglass" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl text-white mb-3">Estética Atemporal</h3>
+                    <p class="text-brand-muted text-sm leading-relaxed font-light">
+                        Vídeos criados para durar. Livre de modismos passageiros, focando em ritmo, composição cinematográfica, paleta de cores harmônica e sonoridade envolvente.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="fade-in-section p-8 rounded-2xl bg-brand-card border border-white/5 hover:border-brand-gold/30 transition-all duration-300 group">
+                    <div class="w-12 h-12 rounded-xl bg-brand-surface flex items-center justify-center text-brand-gold mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="heart-handshake" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl text-white mb-3">Respeito ao Ritmo</h3>
+                    <p class="text-brand-muted text-sm leading-relaxed font-light">
+                        Entendemos a rotina do criador e do artesão. A captação é conduzida de forma fluida, calma e integrada à dinâmica real do seu ambiente.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="preview" class="py-24 px-6 bg-brand-surface/20 border-t border-white/5 relative">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Text Column -->
+                <div class="lg:col-span-5 fade-in-section">
+                    <span class="text-brand-gold text-xs tracking-widest uppercase font-semibold">Visualizador Interativo</span>
+                    <h2 class="font-serif text-4xl md:text-5xl text-white font-light mt-2 mb-6">A experiência sensorial do formato vertical (9:16)</h2>
+                    <p class="text-brand-muted text-sm leading-relaxed mb-8 font-light">
+                        Explore as camadas visuais que compõem uma narrativa autoral. Selecione abaixo diferentes estilos para simular a sensação da entrega final.
+                    </p>
+
+                    <!-- Concept Selector Buttons -->
+                    <div class="space-y-3" id="concept-selector">
+                        <button onclick="changeScene('craft')" class="scene-btn active w-full p-4 rounded-xl border border-brand-gold bg-brand-card flex items-center justify-between text-left transition-all">
+                            <div>
+                                <span class="text-xs uppercase tracking-wider text-brand-gold block font-semibold">Conceito 01</span>
+                                <span class="text-white font-serif text-lg">Processo Artesanal & Detalhes</span>
+                            </div>
+                            <i data-lucide="play" class="w-4 h-4 text-brand-gold"></i>
+                        </button>
+
+                        <button onclick="changeScene('lifestyle')" class="scene-btn w-full p-4 rounded-xl border border-white/5 bg-brand-card/50 hover:bg-brand-card flex items-center justify-between text-left transition-all">
+                            <div>
+                                <span class="text-xs uppercase tracking-wider text-brand-muted block font-semibold">Conceito 02</span>
+                                <span class="text-white font-serif text-lg">Atmospheric Lifestyle</span>
+                            </div>
+                            <i data-lucide="play" class="w-4 h-4 text-brand-muted"></i>
+                        </button>
+
+                        <button onclick="changeScene('editorial')" class="scene-btn w-full p-4 rounded-xl border border-white/5 bg-brand-card/50 hover:bg-brand-card flex items-center justify-between text-left transition-all">
+                            <div>
+                                <span class="text-xs uppercase tracking-wider text-brand-muted block font-semibold">Conceito 03</span>
+                                <span class="text-white font-serif text-lg">Apresentação Editorial</span>
+                            </div>
+                            <i data-lucide="play" class="w-4 h-4 text-brand-muted"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right Video Simulator (Vertical 9:16 Mockup) -->
+                <div class="lg:col-span-7 flex justify-center fade-in-section">
+                    <div class="relative w-[300px] sm:w-[340px] h-[580px] sm:h-[620px] rounded-[40px] bg-black border-4 border-neutral-800 p-3 shadow-2xl overflow-hidden gold-glow">
+                        
+                        <!-- Notch / Speaker -->
+                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-5 bg-neutral-800 rounded-b-xl z-30"></div>
+
+                        <!-- Inner Screen Container -->
+                        <div id="screen-container" class="relative w-full h-full rounded-[30px] overflow-hidden bg-neutral-900 flex flex-col justify-between p-6 transition-all duration-700 bg-cover bg-center"
+                             style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1513519245088-0e12902e5a38?q=80&w=1000&auto=format&fit=crop');">
+                            
+                            <!-- Top Status Overlay -->
+                            <div class="flex items-center justify-between relative z-20 text-xs text-white/70 pt-4">
+                                <span class="font-serif italic text-brand-sand">Mkt Marinho Showcase</span>
+                                <div class="flex items-center gap-1.5">
+                                    <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+                                    <span class="text-[10px] uppercase tracking-widest font-mono">REC 4K</span>
+                                </div>
+                            </div>
+
+                            <!-- Center Interactive Element -->
+                            <div class="text-center relative z-20 my-auto py-8 px-2">
+                                <div class="inline-block p-4 rounded-full border border-white/20 bg-black/40 backdrop-blur-md mb-4 animate-pulse">
+                                    <i id="scene-icon" data-lucide="hammer" class="w-8 h-8 text-brand-sand"></i>
+                                </div>
+                                <span id="scene-tag" class="text-[10px] tracking-widest uppercase text-brand-gold bg-brand-gold/10 px-3 py-1 rounded-full border border-brand-gold/20 inline-block mb-2">Texturas & Luz</span>
+                                <h4 id="scene-title" class="font-serif text-2xl text-white font-light leading-snug">O silêncio e o detalhe do produto autoral</h4>
+                            </div>
+
+                            <!-- Bottom Audio / Timeline Overlay -->
+                            <div class="relative z-20 space-y-4">
+                                <!-- Waveform simulation -->
+                                <div class="flex items-end justify-center gap-1 h-6">
+                                    <div class="w-1 bg-brand-sand/80 h-3 animate-bounce"></div>
+                                    <div class="w-1 bg-brand-sand/80 h-6 animate-bounce" style="animation-delay: 0.1s"></div>
+                                    <div class="w-1 bg-brand-sand/80 h-4 animate-bounce" style="animation-delay: 0.2s"></div>
+                                    <div class="w-1 bg-brand-sand/80 h-2 animate-bounce" style="animation-delay: 0.3s"></div>
+                                    <div class="w-1 bg-brand-sand/80 h-5 animate-bounce" style="animation-delay: 0.15s"></div>
+                                </div>
+
+                                <div class="bg-black/60 backdrop-blur-md rounded-xl p-3 border border-white/10 text-xs text-brand-sand/90 flex items-center justify-between">
+                                    <div class="flex items-center gap-2">
+                                        <i data-lucide="music" class="w-3.5 h-3.5 text-brand-gold"></i>
+                                        <span id="scene-audio" class="truncate max-w-[160px]">Áudio Autoral & ASMR</span>
+                                    </div>
+                                    <span class="text-[10px] text-brand-muted font-mono">01:20 Max</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="etapas" class="py-24 px-6 border-t border-white/5 relative bg-brand-bg">
+        <div class="max-w-6xl mx-auto">
+            <div class="fade-in-section text-center max-w-2xl mx-auto mb-16">
+                <span class="text-brand-terracotta text-xs tracking-widest uppercase font-semibold">Jornada Simplificada</span>
+                <h2 class="font-serif text-4xl md:text-5xl text-white font-light mt-2 mb-4">Etapas da Produção</h2>
+                <p class="text-brand-muted text-sm font-light">Tudo é planejado para que você não precise se preocupar com aspectos técnicos. O entregável é o vídeo pronto.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Step 1 -->
+                <div class="fade-in-section p-6 rounded-2xl bg-brand-card border border-white/5 relative">
+                    <span class="font-serif text-5xl text-brand-gold/20 font-bold block mb-4">01</span>
+                    <h3 class="font-serif text-xl text-white mb-2">Conceito Estratégico</h3>
+                    <p class="text-brand-muted text-xs leading-relaxed font-light">
+                        Alinhamento da intenção do vídeo, mensagem principal e atmosfera visual desejada.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="fade-in-section p-6 rounded-2xl bg-brand-card border border-white/5 relative">
+                    <span class="font-serif text-5xl text-brand-gold/20 font-bold block mb-4">02</span>
+                    <h3 class="font-serif text-xl text-white mb-2">Roteiro & Estrutura</h3>
+                    <p class="text-brand-muted text-xs leading-relaxed font-light">
+                        Construção dos pontos de corte, narrativa de áudio e ordenação lógica dos takes.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="fade-in-section p-6 rounded-2xl bg-brand-card border border-white/5 relative">
+                    <span class="font-serif text-5xl text-brand-gold/20 font-bold block mb-4">03</span>
+                    <h3 class="font-serif text-xl text-white mb-2">Captação / Gravação</h3>
+                    <p class="text-brand-muted text-xs leading-relaxed font-light">
+                        Gravação no seu espaço com equipamento profissional, iluminação natural/suave e foco nos detalhes.
+                    </p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="fade-in-section p-6 rounded-2xl bg-brand-card border border-white/5 relative border-brand-gold/30 bg-brand-gold/5">
+                    <span class="font-serif text-5xl text-brand-gold/40 font-bold block mb-4">04</span>
+                    <h3 class="font-serif text-xl text-white mb-2">Edição & Entrega</h3>
+                    <p class="text-brand-muted text-xs leading-relaxed font-light">
+                        Tratamento de cor cinematográfico, ritmo, sonorização e exportação em 4K no formato vertical (até 1min20s).
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="escopo" class="py-20 px-6 bg-brand-surface/30 border-t border-white/5">
+        <div class="max-w-4xl mx-auto fade-in-section text-center bg-brand-card p-8 sm:p-12 rounded-3xl border border-white/5">
+            <span class="text-brand-sand text-xs tracking-widest uppercase font-semibold">Clareza & Foco</span>
+            <h2 class="font-serif text-3xl sm:text-4xl text-white font-light mt-2 mb-6">O Diferencial do Nosso Escopo</h2>
+            
+            <p class="text-brand-muted text-sm sm:text-base font-light leading-relaxed mb-8 max-w-2xl mx-auto">
+                Nosso compromisso é entregar a <strong class="text-brand-sand font-normal">obras-primas visuais prontas</strong>. Não fazemos gestão diária de redes sociais ou agendamento de posts; dedicamos 100% da nossa energia e técnica exclusivamente na criação audiovisual autoral de alta percepção.
+            </p>
+
+            <div class="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-brand-bg border border-brand-gold/20 text-xs text-brand-sand">
+                <i data-lucide="check-circle" class="w-4 h-4 text-brand-gold"></i>
+                <span>Foco em vídeos finais prontos para publicação impactante</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-6 border-t border-white/5 bg-brand-bg relative">
+        <div class="max-w-4xl mx-auto text-center fade-in-section">
+            <span class="text-brand-gold text-xs tracking-widest uppercase font-semibold">Investimento Estruturado</span>
+            <h2 class="font-serif text-4xl sm:text-5xl text-white font-light mt-2 mb-4">Valor Base de Produção</h2>
+            <p class="text-brand-muted text-sm font-light mb-12">Transparência para viabilizar projetos com alto padrão estético.</p>
+
+            <div class="bg-gradient-to-b from-brand-card to-brand-surface p-8 sm:p-12 rounded-3xl border border-brand-gold/20 max-w-lg mx-auto gold-glow">
+                <span class="text-xs uppercase tracking-widest text-brand-muted block mb-2">A partir de</span>
+                <div class="font-serif text-5xl sm:text-6xl text-white font-light mb-4">
+                    R$ 300<span class="text-2xl text-brand-sand font-sans">,00</span>
+                </div>
+                <p class="text-brand-muted text-xs font-light leading-relaxed mb-8">
+                    *Valor por entrega pontual de vídeo pronto (até 1min20s). Sujeito a variações de acordo com a complexidade da produção e deslocamento necessário.
+                </p>
+                <a href="https://wa.me/" target="_blank" class="block w-full py-4 rounded-full bg-brand-gold text-brand-bg font-medium text-xs uppercase tracking-widest hover:bg-brand-sand transition-all duration-300">
+                    Consultar Disponibilidade
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 px-6 border-t border-white/5 text-center text-brand-muted text-xs font-light">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <span class="font-serif text-lg text-brand-sand">Mkt Marinho</span>
+            <p>© 2026 Mkt Marinho. Todos os direitos reservados. Produção Audiovisual Autoral.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Scene configuration data
+        const scenes = {
+            craft: {
+                bg: 'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?q=80&w=1000&auto=format&fit=crop',
+                icon: 'hammer',
+                tag: 'Texturas & Luz',
+                title: 'O silêncio e o detalhe do produto autoral',
+                audio: 'Sons de Atelier & Textura (ASMR)'
+            },
+            lifestyle: {
+                bg: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1000&auto=format&fit=crop',
+                icon: 'sun',
+                tag: 'Atmosfera & Ritmo',
+                title: 'A experiência vivida em cada espaço e momento',
+                audio: 'Acústico Orgânico & Ambiente'
+            },
+            editorial: {
+                bg: 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=1000&auto=format&fit=crop',
+                icon: 'camera',
+                tag: 'Estética & Sofisticação',
+                title: 'Elegância minimalista para valorizar sua marca',
+                audio: 'Ambient Minimal & Trilha Lo-Fi'
+            }
+        };
+
+        // Function to switch scenes in the 9:16 interactive simulator
+        function changeScene(key) {
+            const scene = scenes[key];
+            const screen = document.getElementById('screen-container');
+            const icon = document.getElementById('scene-icon');
+            const tag = document.getElementById('scene-tag');
+            const title = document.getElementById('scene-title');
+            const audio = document.getElementById('scene-audio');
+
+            // Smooth transition effect
+            screen.style.opacity = '0.4';
+
+            setTimeout(() => {
+                screen.style.backgroundImage = `linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.8)), url('${scene.bg}')`;
+                tag.innerText = scene.tag;
+                title.innerText = scene.title;
+                audio.innerText = scene.audio;
+                
+                // Update icon dynamically
+                icon.setAttribute('data-lucide', scene.icon);
+                lucide.createIcons();
+
+                screen.style.opacity = '1';
+            }, 300);
+
+            // Update active states on buttons
+            const buttons = document.querySelectorAll('#concept-selector button');
+            buttons.forEach(btn => {
+                btn.classList.remove('border-brand-gold');
+                btn.classList.add('border-white/5');
+            });
+
+            event.currentTarget.classList.remove('border-white/5');
+            event.currentTarget.classList.add('border-brand-gold');
+        }
+
+        // Intersection Observer for fade-in animations on scroll
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            const fadeElements = document.querySelectorAll('.fade-in-section');
+            fadeElements.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>
